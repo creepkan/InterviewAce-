@@ -3,14 +3,21 @@ body {
   font-family: Arial, sans-serif; 
   display: flex; 
   justify-content: center;  
-  align-items: center;  
-  height: 100vh;  
+  align-items: flex-start;  
+  min-height: 100vh;
+  overflow-y: auto;  
   background: #f0f8f7; /* 薄荷绿背景 */ 
   margin: 0; 
 }
- 
+ html {
+  height: auto; /* 自动调整页面高度 */
+  overflow-y: auto; /* 启用页面滚动条 */
+}
+
 .login-container, 
-#camera-container { 
+#camera-container {
+  max-height: 90vh; /* 设置最大高度 */
+overflow-y: auto; /* 超出内容显示滚动条 */
   text-align: center; 
   border: 2px solid #98DBC6; 
   border-radius: 10px;
